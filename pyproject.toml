@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "YogaCenterApp"
+version = "1.0"
+dependencies = [
+  "sqlmodel>=0.0.27",
+  "PyQt6>=6.10.1",
+  "bcrypt>=5.0.0"
+]
+requires-python = ">=3.8"
+authors = [
+  {name = "Angel Altuve", email = "angelaltuve@murena.io"},
+]
+
+description = "Yoga Center App"
+readme = "README.md"
+license = "GPL-3.0-or-later"
+license-files = ["LICEN[CS]E.*"]
+keywords = ["yoga", "center", "app"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python"
+]
+
+[tool.basedpyright]
+include = ["."]
+exclude = ["**/node_modules",
+    "**/__pycache__",
+]
+
+reportMissingImports = "error"
+reportMissingTypeStubs = false
+reportAny = "none"
+typeCheckingMode = "basic"
+reportUnusedImport = "none"
+reportUnusedVariable = "none"
+reportOptionalMemberAccess = "none"
+reportGeneralTypeIssues = "warning"
+
+
+pythonVersion = "3.13.11"
+pythonPlatform = "Linux"
+
+[tool.black]
+line-length = 79
+target-version = ['py313']
+
+[tool.isort]
+profile = "black"
+line_length = 79
