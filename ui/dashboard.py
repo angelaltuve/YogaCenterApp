@@ -20,8 +20,6 @@ from database.db import (
     get_session, select, YogaClass, User, Role, Payment, Center, Attendance,
     get_available_classes_for_date, get_student_statistics, get_teacher_statistics
 )
-# ELIMINA esta línea: from sqlalchemy import func
-
 
 class DashboardWidget(QWidget):
     def __init__(self, user):
