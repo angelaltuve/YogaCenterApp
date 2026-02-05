@@ -6,14 +6,21 @@ build-backend = "setuptools.build_meta"
 name = "YogaCenterApp"
 version = "1.0"
 dependencies = [
-  "sqlmodel>=0.0.27",
-  "PyQt6>=6.10.1",
-  "bcrypt>=5.0.0"
+  "annotated-types==0.7.0",
+  "bcrypt==5.0.0",
+  "greenlet==3.3.0",
+  "pydantic==2.12.5",
+  "pydantic_core==2.41.5",
+  "PyQt6==6.10.2",
+  "PyQt6-Qt6==6.10.1",
+  "PyQt6_sip==13.10.3",
+  "SQLAlchemy==2.0.45",
+  "sqlmodel==0.0.31",
+  "typing-inspection==0.4.2",
+  "typing_extensions==4.15.0",
 ]
 requires-python = ">=3.8"
-authors = [
-  {name = "Angel Altuve", email = "angelaltuve@murena.io"},
-]
+authors = [{ name = "Angel Altuve", email = "angelaltuve@murena.io" }]
 
 description = "Yoga Center App"
 readme = "README.md"
@@ -22,14 +29,12 @@ license-files = ["LICEN[CS]E.*"]
 keywords = ["yoga", "center", "app"]
 classifiers = [
   "Development Status :: 4 - Beta",
-  "Programming Language :: Python"
+  "Programming Language :: Python",
 ]
 
 [tool.basedpyright]
 include = ["."]
-exclude = ["**/node_modules",
-    "**/__pycache__",
-]
+exclude = ["**/node_modules", "**/__pycache__"]
 
 reportMissingImports = "error"
 reportMissingTypeStubs = false
